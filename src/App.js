@@ -7,7 +7,7 @@ import './styles.css';
 const App = () => {
   return (
     <div>
-      <h1>Registration Online</h1>
+      <h1>Register Online</h1>
       <RegistrationForm />
     </div>
   );
