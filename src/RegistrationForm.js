@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Field, FormSpy } from 'react-final-form';
+import { Form, Field } from 'react-final-form';
 
 const validate = (values) => {
   const errors = {};
@@ -39,7 +39,21 @@ const RegistrationForm = () => {
       validate={validate}
       render={({ handleSubmit }) => (
         <form onSubmit={handleSubmit}>
-          {/* Rest of the form fields */}
+          <div>
+            <label>First Name</label>
+            <Field name="firstName" component="input" type="text" />
+            <Field name="firstName" subscription={{ touched: true, error: true }}>
+              {({ input, meta }) => (meta.touched && meta.error ? <span>{meta.error}</span> : null)}
+            </Field>
+          </div>
+          <div>
+            <label>Last Name</label>
+            <Field name="lastName" component="input" type="text" />
+            <Field name="lastName" subscription={{ touched: true, error: true }}>
+              {({ input, meta }) => (meta.touched && meta.error ? <span>{meta.error}</span> : null)}
+            </Field>
+          </div>
+          {/* Repeat similar structure for other fields */}
           <button type="submit">Submit</button>
         </form>
       )}
