@@ -53,7 +53,41 @@ const RegistrationForm = () => {
               {({ input, meta }) => (meta.touched && meta.error ? <span>{meta.error}</span> : null)}
             </Field>
           </div>
-          {/* Repeat similar structure for other fields */}
+          <div>
+            <label>Zip Code</label>
+            <Field name="zipCode" component="input" type="text" />
+            <Field name="zipCode" subscription={{ touched: true, error: true }}>
+              {({ input, meta }) => (meta.touched && meta.error ? <span>{meta.error}</span> : null)}
+            </Field>
+          </div>
+          <div>
+            <label>Social Security Number</label>
+            <Field name="ssn" component="input" type="text" />
+            <Field name="ssn" subscription={{ touched: true, error: true }}>
+              {({ input, meta }) => (meta.touched && meta.error ? <span>{meta.error}</span> : null)}
+            </Field>
+          </div>
+          <div>
+            <label>Date of Birth</label>
+            <Field name="dob" component="input" type="text" />
+            <Field name="dob" subscription={{ touched: true, error: true }}>
+              {({ input, meta }) => (meta.touched && meta.error ? <span>{meta.error}</span> : null)}
+            </Field>
+          </div>
+          <div>
+            <label>Email Address</label>
+            <Field name="email" component="input" type="text" />
+            <Field name="email" subscription={{ touched: true, error: true }}>
+              {({ input, meta }) => (meta.touched && meta.error ? <span>{meta.error}</span> : null)}
+            </Field>
+          </div>
+          <div>
+            <label>Phone Number</label>
+            <Field name="phone" component="input" type="text" />
+            <Field name="phone" subscription={{ touched: true, error: true }}>
+              {({ input, meta }) => (meta.touched && meta.error ? <span>{meta.error}</span> : null)}
+            </Field>
+          </div>
           <button type="submit">Submit</button>
         </form>
       )}
